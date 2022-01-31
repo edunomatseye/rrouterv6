@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, useNavigate, useParams } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 
 function DashboardMessage() {
   const params = useParams();
