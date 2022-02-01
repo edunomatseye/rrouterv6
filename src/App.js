@@ -1,18 +1,7 @@
 import * as React from 'react'
 import { Routes, Route, Link, Outlet } from 'react-router-dom'
-
 import { Dashboard, Home, About } from './pages/index'
 import { DashboardMessage, DashboardTask, DashboardChat} from './components/index'
-
-/*
-import Dashboard from './pages/Dashboard'
-import About from './pages/About'
-import Home from './pages/Home'
-
-import DashboardMessage from './components/DashboardMessage'
-import DashboardTask from './components/DashboardTask'
-import DashboardChat from './components/DashboardChat'
-*/
 
 function App() {
     
@@ -47,7 +36,7 @@ function App() {
                 </div>
             </nav>
 
-            <Routes>
+            <Routes>              
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="dashboard" element={<Dashboard />} >
@@ -55,7 +44,7 @@ function App() {
                     <Route path="message/:msgId" element={<DashboardMessage />} />
                     <Route path="task" element={<DashboardTask />} />
                     <Route path="chat" element={<DashboardChat />} />
-                </Route>
+                </Route>          
             </Routes>
 
             <Outlet />
